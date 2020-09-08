@@ -1,0 +1,190 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Guillaume}{Le Berre}{guillaume.le-berre@loria.fr | guillaume.le.berre@umontreal.ca}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Proficient:}
+Python \textbullet{} Pytorch \textbullet{} C \textbullet{} C++ \\
+Latex \textbullet{} Linux \textbullet{} Windows \textbullet{} Git \\
+\location{Familiar:}
+Tensorflow \textbullet{} Java \textbullet{} OCaml \\
+Javascript \textbullet{} CSS \textbullet{} HTML
+\sectionsep
+
+\subsection{Languages}
+English \textbullet{} French \textbullet{} Japanese
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Advanced Software Engineering \\
+Advanced Machine Learning \\
+Machine Learning \\
+Algorithms \\
+Data Structures \\
+Foundation of Computing \\
+Malware \& Security \\
+Compilers \\
+Computer Networks \\
+\sectionsep
+
+\subsection{Undergraduate}
+Mathematics \\
+Computer Science \\
+Physics \\
+Chemistry \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Facebook:// \href{https://facebook/gleberre}{\bf gleberre} \\
+Github:// \href{https://github.com/Guilleber}{\bf Guilleber} \\
+LinkedIn://  \href{https://www.linkedin.com/in/guillaume-le-berre}{\bf guillaume-le-berre} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+\runsubsection{University of Montreal}
+\descript{| PhD in Computer Science}
+\location{Oct 2018 - Present | Montreal, QC, Canada}
+\vspace{\topsep}
+\begin{tightemize}
+\item
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Mines de Nancy}
+\descript{| MEng in Computer Science }
+\location{Sep 2015 – Sep 2018 | Nancy, France}
+\begin{tightemize}
+\item
+\end{tightemize}
+\sectionsep
+
+\runsubsection{University of Rennes}
+\descript{| BS in Engineering }
+\location{Sep 2013 – Jun 2015 | Rennes, France}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{University of Montreal}
+\descript{| Teaching Assistant}
+\location{Jan 2019 – Dec 2019 | Montreal, QC, Canada}
+\sectionsep
+
+\runsubsection{Japan Advanced Institute for Science and Technology}
+\descript{| Research Internship}
+\location{Jun 2017 – Aug 2017 | Nomi, Japan}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications} 
+\renewcommand\refname{\vskip -1.5em} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+\bibliography{publications}
+\nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
